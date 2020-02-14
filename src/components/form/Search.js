@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getUser } from 'actions'
+import { getUser } from 'actions';
 
 const Search = () => {
   const [userQuery, setUserQuery] = useState('');
@@ -10,7 +10,6 @@ const Search = () => {
     event.preventDefault();
     dispatch(getUser(userQuery));
   };
-
 
   return (
     <form onSubmit={handleSubmit}>

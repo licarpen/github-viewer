@@ -1,6 +1,6 @@
 import React from 'react';
+import UserContainer from '../components/user/UserContainer';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <UserContainer></UserContainer>;
 }
-  

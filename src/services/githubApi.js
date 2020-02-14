@@ -1,5 +1,5 @@
 const request = path => {
-  return fetch(`https://api.github.com${path}`)
+  return fetch(`https://cors-anywhere.herokuapp.com/https://api.github.com${path}`)
     .then(res => Promise.all([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw json;
@@ -8,4 +8,4 @@ const request = path => {
     });
 };
 
-export const getUser = (id) => request(`/users/${id}`);
+export const fetchUser = (id) => request(`/users/${id}`);
