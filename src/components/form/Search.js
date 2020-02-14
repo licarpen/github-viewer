@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getUser } from 'actions';
+import { fetchUser } from '../../actions/userActions';
 
 const Search = () => {
   const [userQuery, setUserQuery] = useState('');
@@ -8,7 +8,7 @@ const Search = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(getUser(userQuery));
+    dispatch(fetchUser(userQuery));
   };
 
   return (

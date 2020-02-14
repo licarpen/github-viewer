@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
-import UserInfo from './UserInfo';
+// import UserInfo from './UserInfo';
 // import UserReposList from './UserReposList';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchUser } from '../../actions/userActions';
+import Loading from '../loading/Loading';
+import { useSelector } from 'react-redux';
 import { getUser } from '../../selectors/userSelectors';
 
 const UserContainer = () => {
-  const dispatch = useDispatch();
   const user = useSelector(getUser);
+  console.log('user in UserContainer before useEffect', user);
 
-  useEffect(() => {
-    dispatch(fetchUser());
-  }, []);
+  useEffect(() => {}, []);
+
+  if(!user) return <Loading />;
 
   return (
     <>
-      {user}
+      <p>{user.login}</p>
     </>
   );
 };
