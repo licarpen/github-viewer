@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import Loading from '../loading/Loading';
 import { useSelector, useDispatch } from 'react-redux';
-import { getUser, getUserRepos, isLoading } from '../../selectors/userSelectors';
+import { getUser, getUserRepos, isLoadingUserRepos } from '../../selectors/userSelectors';
 import { fetchUserRepos } from '../../actions/userActions';
 
 
 const UserReposList = () => {
   const dispatch = useDispatch();
-  const loading = useSelector(isLoading);
+  const loading = useSelector(isLoadingUserRepos);
   const user = useSelector(getUser);
   const userRepos = useSelector(getUserRepos);
 

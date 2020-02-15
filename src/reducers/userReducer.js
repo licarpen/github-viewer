@@ -1,7 +1,8 @@
-import { FETCH_USER, FETCH_USER_LOADING, FETCH_USER_REPOS } from '../actions/userActions';
+import { FETCH_USER, FETCH_USER_LOADING, FETCH_USER_REPOS, FETCH_USER_REPOS_LOADING } from '../actions/userActions';
 
 const initialState = {
-  loading: false,
+  userLoading: false,
+  userReposLoading: false,
   userInfo: null,
   userRepos: null
 };
@@ -9,6 +10,8 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case FETCH_USER_LOADING:
+      return { ...state, loading: true };
+    case FETCH_USER_REPOS_LOADING:
       return { ...state, loading: true };
     case FETCH_USER:
       return { ...state, loading: false, userInfo: action.payload };

@@ -1,6 +1,7 @@
 import { getFetchUser, getFetchUserRepos } from '../services/githubApi';
 
 export const FETCH_USER_LOADING = 'FETCH_USER_LOADING';
+export const FETCH_USER_REPOS_LOADING = 'FETCH_USER_REPOS_LOADING';
 
 export const FETCH_USER = 'FETCH_USER';
 export const fetchUser = (userQuery) => dispatch => {
