@@ -15,7 +15,10 @@ const UserContainer = () => {
 
   return (
     <>
-      <p>{user.login}</p>
+      <h2>Name: {user.name}</h2>
+      <p># Followers: {user.followers}</p>
+      <p># Following: {user.following}</p>
+      <a href={user.url}>Go to Profile</a>
     </>
   );
 };
