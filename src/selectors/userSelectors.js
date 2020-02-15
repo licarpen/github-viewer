@@ -1,2 +1,3 @@
 export const getUser = state => state.userInfo;
-export const isLoadingPosts = state => state.loading;
+export const isLoading = state => state.loading;
+export const getUserRepos = state => state.userRepos;
