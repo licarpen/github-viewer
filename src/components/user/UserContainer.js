@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 // import UserInfo from './UserInfo';
-// import UserReposList from './UserReposList';
 import Loading from '../loading/Loading';
 import UserReposList from './UserReposList';
 import { useSelector } from 'react-redux';
@@ -8,14 +7,13 @@ import { getUser, isLoading } from '../../selectors/userSelectors';
 
 const UserContainer = () => {
   const user = useSelector(getUser);
-  const loading = useSelector(isLoading);
+  // const loading = useSelector(isLoading);
 
   useEffect(() => {}, []);
 
   // if(loading) return <Loading />;
   if(!user) return <p></p>;
   
-
   return (
     <>
       <div>

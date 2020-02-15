@@ -15,6 +15,7 @@ export default function reducer(state = initialState, action) {
     case FETCH_USER_REPOS:
       return { ...state, loading: false, userRepos: action.payload };
     default:
+      // eslint-disable-next-line no-console
       console.log('No user found.');
       return state;
   }
