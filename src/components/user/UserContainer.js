@@ -8,6 +8,7 @@ import { getUser, isLoadingUser } from '../../selectors/userSelectors';
 const UserContainer = () => {
   const user = useSelector(getUser);
   const loading = useSelector(isLoadingUser);
+  console.log(loading);
 
   useEffect(() => {}, []);
 

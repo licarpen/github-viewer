@@ -4,12 +4,12 @@ import reducer from './userReducer';
 describe('user reducer', () => {
   it('handles the fetch user loading action', () => {
     const action = { type: FETCH_USER_LOADING };
-    const initialState = { loading: false, userInfo: null };
+    const initialState = { loadingUser: false, userInfo: null };
 
     const newState = reducer(initialState, action);
 
     expect(newState).toEqual({
-      loading: true,
+      loadingUser: true,
       userInfo: null
     });
   });
@@ -20,12 +20,12 @@ describe('user reducer', () => {
       payload: { login: 'licarpen', followers: 8 }
     };
 
-    const initialState = { loading: true, userInfo: null };
+    const initialState = { loadingUser: true, userInfo: null };
 
     const newState = reducer(initialState, action);
 
     expect(newState).toEqual({
-      loading: false,
+      loadingUser: false,
       userInfo: { login: 'licarpen', followers: 8 }
     });
   });
@@ -34,12 +34,12 @@ describe('user reducer', () => {
 describe('userRepos reducer', () => {
   it('handles the fetch userRepos loading action', () => {
     const action = { type: FETCH_USER_REPOS_LOADING };
-    const initialState = { loading: false, userRepos: null };
+    const initialState = { loadingUserRepos: false, userRepos: null };
 
     const newState = reducer(initialState, action);
 
     expect(newState).toEqual({
-      loading: true,
+      loadingUserRepos: true,
       userRepos: null
     });
   });
@@ -50,12 +50,12 @@ describe('userRepos reducer', () => {
       payload: [{ name: 'lab1' }, { name: 'lab2' }]
     };
 
-    const initialState = { loading: true, userRepos: null };
+    const initialState = { loadingUserRepos: true, userRepos: null };
 
     const newState = reducer(initialState, action);
 
     expect(newState).toEqual({
-      loading: false,
+      loadingUserRepos: false,
       userRepos: [{ name: 'lab1' }, { name: 'lab2' }]
     });
   });
