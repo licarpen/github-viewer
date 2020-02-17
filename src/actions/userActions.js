@@ -15,7 +15,7 @@ export const fetchUser = (userQuery) => dispatch => {
 
 export const FETCH_USER_REPOS = 'FETCH_USER_REPOS';
 export const fetchUserRepos = (userName) => dispatch => {
-  dispatch({ type: FETCH_USER_LOADING });
+  dispatch({ type: FETCH_USER_REPOS_LOADING });
   return getFetchUserRepos(userName)
     .then(userRepos => dispatch({
       type: FETCH_USER_REPOS,
