@@ -1,0 +1,22 @@
+body{
+  width: 50%;
+  margin: auto;
+  
+  h1{
+    text-align: center;
+  }
+  form{
+    width: 30%;
+    margin: auto;
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 600px){
+    width: 80%;
+
+    form{
+      width: 60%;
+      margin: auto;
+    }
+  }
+}
