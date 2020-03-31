@@ -3,7 +3,7 @@ An exercise in using the react-redux methodology.  This app allows a user to sea
 
 GitHub api documentation: https://developer.github.com/v3/
 
-## Application Architecture
+## Technology Details
 
 * React/Redux
 * Action, reducer, selector pattern
@@ -16,7 +16,8 @@ GitHub api documentation: https://developer.github.com/v3/
 
 Users can search any GitHub username.  For matches, the following is displayed:
 
-* username
+* Username
+* Account name
 * follower count
 * following count
 * link to user's GitHub profile
